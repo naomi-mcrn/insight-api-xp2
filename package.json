@@ -48,7 +48,7 @@
     "base58-native": "0.1.2",
     "bignum": "*",
     "morgan": "*",
-    "bitcore": "git://github.com/ett126/bitcore-xpchain.git",
+    "bitcore": "git://github.com/naomi-mcrn/bitcore-xp2.git",
     "bufferput": "git://github.com/bitpay/node-bufferput.git",
     "buffertools": "2.1.6",
     "commander": "^2.3.0",

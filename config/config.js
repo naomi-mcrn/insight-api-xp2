@@ -20,22 +20,22 @@ function getUserHome() {
   return process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
 }
 
-var home = process.env.INSIGHT_DB || (getUserHome() + '/.insight-xpchain');
+var home = process.env.INSIGHT_DB || (getUserHome() + '/.insight-xp2');
 
 if (process.env.INSIGHT_NETWORK === 'livenet') {
   env = 'livenet';
   db = home;
-  port = '3000';
-  b_port = '8762';
-  p2p_port = '8798';
-  switch_height = 10275;
+  port = '3303';
+  b_port = '19325';
+  p2p_port = '19324';
+  switch_height = 300;
 } else {
   env = 'testnet';
   db = home + '/testnet';
-  port = '3001';
-  b_port = '18762';
-  p2p_port = '18798';
-  switch_height = 10275;
+  port = '3403';
+  b_port = '19327';
+  p2p_port = '19326';
+  switch_height = 300;
 }
 port = parseInt(process.env.INSIGHT_PORT) || port;
 
@@ -60,11 +60,11 @@ var isWin = /^win/.test(process.platform);
 var isMac = /^darwin/.test(process.platform);
 var isLinux = /^linux/.test(process.platform);
 if (!dataDir) {
-  if (isWin) dataDir = '%APPDATA%\\XPChain\\';
-  if (isMac) dataDir = process.env.HOME + '/Library/Application Support/XPChain/';
-  if (isLinux) dataDir = process.env.HOME + '/.xpchain/';
+  if (isWin) dataDir = '%APPDATA%\\eXperiencePoints\\';
+  if (isMac) dataDir = process.env.HOME + '/Library/Application Support/eXperiencePoints/';
+  if (isLinux) dataDir = process.env.HOME + '/.eXperiencePoints/';
 }
-dataDir += network === 'testnet' ? 'testnet3' : '';
+dataDir += network === 'testnet' ? 'testnet4' : '';
 
 var safeConfirmations = process.env.INSIGHT_SAFE_CONFIRMATIONS || 6;
 var ignoreCache = process.env.INSIGHT_IGNORE_CACHE || 0;
